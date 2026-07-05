@@ -23,6 +23,10 @@
           <a href="#consult">AI顾问</a>
           <a href="/crm.html">CRM后台</a>
         </div>
+        <div class="nav-actions">
+          <button class="btn btn-secondary auth-trigger" data-mode="login">登录</button>
+          <button class="btn btn-primary auth-trigger" data-mode="register">注册</button>
+        </div>
       </nav>
 
       <div class="container hero-grid">
@@ -126,22 +130,22 @@
             </p>
           </div>
 
-          <form id="consult-form" class="panel">
-            <label>
-              企业/姓名
-              <input type="text" name="name" placeholder="请输入企业或姓名" required />
-            </label>
-            <label>
-              联系方式
-              <input type="text" name="contact" placeholder="电话或邮箱" required />
-            </label>
-            <label>
-              需求场景
-              <textarea name="need" rows="4" placeholder="请描述您希望解决的业务问题"></textarea>
-            </label>
-            <button class="btn btn-primary" type="submit">提交咨询</button>
-            <p id="form-msg" class="form-msg"></p>
-          </form>
+          <div class="chat-shell panel">
+            <div class="chat-header">
+              <div>
+                <h3>AI 顾问</h3>
+                <p>24/7 在线协助</p>
+              </div>
+              <span class="tag">在线</span>
+            </div>
+            <div class="chat-body" id="chat-body">
+              <div class="bubble bot">您好，我是 NexaArtistry AI 顾问。请告诉我您想解决的业务问题。</div>
+            </div>
+            <form id="chat-form" class="chat-input-row">
+              <input id="chat-input" type="text" placeholder="输入您的需求，例如：需要官网、AI咨询或CRM系统" required />
+              <button class="btn btn-primary" type="submit">发送</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
@@ -152,6 +156,31 @@
         <a href="mailto:hello@nexaartistry.ai">hello@nexaartistry.ai</a>
       </div>
     </footer>
+
+    <div class="modal-backdrop" id="authModal" hidden>
+      <div class="modal-card">
+        <div class="modal-head">
+          <h3 id="authTitle">登录</h3>
+          <button class="modal-close" id="closeAuth" type="button" aria-label="关闭">×</button>
+        </div>
+        <div class="auth-tabs">
+          <button class="tab-btn active" type="button" data-mode="login">登录</button>
+          <button class="tab-btn" type="button" data-mode="register">注册</button>
+        </div>
+        <form class="auth-form" id="authForm">
+          <label>
+            邮箱
+            <input type="email" name="email" placeholder="name@company.com" required />
+          </label>
+          <label>
+            密码
+            <input type="password" name="password" placeholder="请输入密码" required />
+          </label>
+          <button class="btn btn-primary" type="submit">确认</button>
+        </form>
+        <p id="authMessage" class="form-msg"></p>
+      </div>
+    </div>
 
     <script src="/script.js"></script>
   </body>

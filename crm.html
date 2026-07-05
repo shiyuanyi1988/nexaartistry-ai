@@ -7,94 +7,166 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <header class="page-header">
-      <div class="container page-header-row">
-        <div>
-          <p class="eyebrow">CRM 后台</p>
-          <h1>客户运营中心</h1>
-          <p class="lead">实时查看线索来源、跟进状态与成交进度。</p>
+    <div class="admin-shell">
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-mark">N</div>
+          <div>
+            <strong>NexaArtistry</strong>
+            <span>运营平台</span>
+          </div>
         </div>
-        <a class="btn btn-secondary" href="/">返回官网</a>
-      </div>
-    </header>
 
-    <main class="container dashboard">
-      <section class="stats-grid">
-        <div class="stat-card">
-          <h3>新增线索</h3>
-          <p>24</p>
-        </div>
-        <div class="stat-card">
-          <h3>待跟进</h3>
-          <p>8</p>
-        </div>
-        <div class="stat-card">
-          <h3>已报价</h3>
-          <p>12</p>
-        </div>
-        <div class="stat-card">
-          <h3>成交数</h3>
-          <p>5</p>
-        </div>
-      </section>
+        <nav class="sidebar-nav">
+          <a class="active" href="#">概览</a>
+          <a href="#">客户详情</a>
+          <a href="#">工单</a>
+          <a href="#">报价</a>
+          <a href="#">设置</a>
+        </nav>
 
-      <section class="panel">
-        <div class="panel-head">
-          <h2>销售漏斗</h2>
-          <span class="tag">实时更新</span>
+        <div class="sidebar-footer">
+          <button class="btn btn-secondary auth-trigger" data-mode="login" type="button">登录 / 注册</button>
         </div>
-        <div class="cards">
-          <article class="card">
-            <h3>咨询中</h3>
+      </aside>
+
+      <div class="admin-main">
+        <header class="dashboard-topbar">
+          <div>
+            <p class="eyebrow">CRM 后台</p>
+            <h1>客户运营中心</h1>
+          </div>
+          <div class="topbar-actions">
+            <a class="btn btn-secondary" href="/">返回官网</a>
+            <button class="btn btn-primary auth-trigger" data-mode="register" type="button">创建账号</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <div class="stat-card">
+            <h3>新增线索</h3>
+            <p>24</p>
+          </div>
+          <div class="stat-card">
+            <h3>待跟进</h3>
+            <p>8</p>
+          </div>
+          <div class="stat-card">
+            <h3>已报价</h3>
             <p>12</p>
-          </article>
-          <article class="card">
-            <h3>已预约</h3>
-            <p>6</p>
-          </article>
-          <article class="card">
-            <h3>已成交</h3>
+          </div>
+          <div class="stat-card">
+            <h3>成交数</h3>
             <p>5</p>
-          </article>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <section class="panel">
-        <div class="panel-head">
-          <h2>近期客户</h2>
-          <span class="tag">今日更新</span>
+        <section class="module-grid">
+          <article class="panel module-card">
+            <div class="panel-head">
+              <h2>客户详情</h2>
+              <span class="tag">重点客户</span>
+            </div>
+            <div class="detail-list">
+              <div class="detail-item"><span>客户</span><strong>张先生</strong></div>
+              <div class="detail-item"><span>行业</span><strong>教育服务</strong></div>
+              <div class="detail-item"><span>来源</span><strong>官网咨询</strong></div>
+              <div class="detail-item"><span>状态</span><strong>待跟进</strong></div>
+            </div>
+          </article>
+
+          <article class="panel module-card">
+            <div class="panel-head">
+              <h2>工单</h2>
+              <span class="tag">3 条待处理</span>
+            </div>
+            <ul class="stack-list">
+              <li>补充品牌官网需求说明</li>
+              <li>确认 CRM 数据字段</li>
+              <li>审核报价方案</li>
+            </ul>
+          </article>
+
+          <article class="panel module-card">
+            <div class="panel-head">
+              <h2>报价</h2>
+              <span class="tag">2 份已生成</span>
+            </div>
+            <div class="quote-item">
+              <strong>基础方案</strong>
+              <span>¥18,000</span>
+            </div>
+            <div class="quote-item">
+              <strong>标准方案</strong>
+              <span>¥36,000</span>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>近期客户</h2>
+            <span class="tag">实时更新</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>客户</th>
+                <th>联系信息</th>
+                <th>状态</th>
+                <th>备注</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>张先生</td>
+                <td>138****1234</td>
+                <td>待跟进</td>
+                <td>咨询品牌官网方案</td>
+              </tr>
+              <tr>
+                <td>李女士</td>
+                <td>hello@demo.com</td>
+                <td>已报价</td>
+                <td>等待确认方案</td>
+              </tr>
+              <tr>
+                <td>王总</td>
+                <td>139****4567</td>
+                <td>已成交</td>
+                <td>签约成功</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="authModal" hidden>
+      <div class="modal-card">
+        <div class="modal-head">
+          <h3 id="authTitle">登录</h3>
+          <button class="modal-close" id="closeAuth" type="button" aria-label="关闭">×</button>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>客户</th>
-              <th>联系信息</th>
-              <th>状态</th>
-              <th>备注</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>张先生</td>
-              <td>138****1234</td>
-              <td>待跟进</td>
-              <td>咨询品牌官网方案</td>
-            </tr>
-            <tr>
-              <td>李女士</td>
-              <td>hello@demo.com</td>
-              <td>已报价</td>
-              <td>等待确认方案</td>
-            </tr>
-            <tr>
-              <td>王总</td>
-              <td>139****4567</td>
-              <td>已成交</td>
-              <td>签约成功</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </main>
+        <div class="auth-tabs">
+          <button class="tab-btn active" type="button" data-mode="login">登录</button>
+          <button class="tab-btn" type="button" data-mode="register">注册</button>
+        </div>
+        <form class="auth-form" id="authForm">
+          <label>
+            邮箱
+            <input type="email" name="email" placeholder="name@company.com" required />
+          </label>
+          <label>
+            密码
+            <input type="password" name="password" placeholder="请输入密码" required />
+          </label>
+          <button class="btn btn-primary" type="submit">确认</button>
+        </form>
+        <p id="authMessage" class="form-msg"></p>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
   </body>
 </html>

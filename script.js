@@ -8,6 +8,8 @@ if (form) {
     const payload = Object.fromEntries(formData.entries());
 
     msg.textContent = '正在提交您的需求...';
+    const submitButton = form.querySelector('button[type="submit"]');
+    if (submitButton) submitButton.disabled = true;
 
     try {
       const response = await fetch('/api/submit', {
@@ -21,6 +23,8 @@ if (form) {
       form.reset();
     } catch (error) {
       msg.textContent = '提交失败，请稍后重试。';
+    } finally {
+      if (submitButton) submitButton.disabled = false;
     }
   });
 }

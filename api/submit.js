@@ -1,4 +1,4 @@
-export default function handler(req, res) {
+module.exports = (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: '只支持 POST 请求' });
   }
@@ -14,4 +14,4 @@ export default function handler(req, res) {
       status: 'received',
     },
   });
-}
+};

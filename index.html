@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智链AI · 官网 + AI顾问 + CRM</title>
+    <meta
+      name="description"
+      content="面向企业的官网、AI顾问和CRM后台一体化解决方案"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav container">
+        <a class="brand" href="/">智链AI</a>
+        <div class="nav-links">
+          <a href="#features">功能</a>
+          <a href="#consult">AI顾问</a>
+          <a href="/crm.html">CRM后台</a>
+        </div>
+      </nav>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">官网 · AI顾问 · CRM后台</p>
+          <h1>把客户线索、报价和沟通统一到一个系统里。</h1>
+          <p class="lead">
+            从官网入口到微信提醒，再到后台管理，帮助你把业务流程变得更快、更清晰。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#consult">立即体验 AI 顾问</a>
+            <a class="btn btn-secondary" href="/crm.html">查看后台演示</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h3>系统能力</h3>
+          <ul>
+            <li>官网展示与品牌介绍</li>
+            <li>AI智能咨询与初步报价</li>
+            <li>CRM客户管理与跟进状态</li>
+            <li>企业微信消息通知</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="features" class="section container">
+        <h2>为你准备的三大核心模块</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>官网</h3>
+            <p>展示公司介绍、服务内容、案例和联系方式，帮助客户快速建立信任。</p>
+          </article>
+          <article class="card">
+            <h3>AI顾问</h3>
+            <p>为客户提供 24/7 的咨询服务，自动收集需求并生成初步建议。</p>
+          </article>
+          <article class="card">
+            <h3>CRM后台</h3>
+            <p>统一查看客户线索、跟进状态、报价和工单，提高销售效率。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="consult" class="section section-alt">
+        <div class="container consult-grid">
+          <div>
+            <p class="eyebrow">AI 顾问</p>
+            <h2>让客户把需求说清楚，先不用你一条条回复。</h2>
+            <p>
+              这个入口可用于官网的咨询按钮，收集客户信息、识别需求并生成基础回复。
+            </p>
+          </div>
+
+          <form id="consult-form" class="panel">
+            <label>
+              您的姓名
+              <input type="text" name="name" placeholder="请输入姓名" required />
+            </label>
+            <label>
+              联系方式
+              <input type="text" name="contact" placeholder="电话或邮箱" required />
+            </label>
+            <label>
+              需求描述
+              <textarea name="need" rows="4" placeholder="请简单描述您的业务需求"></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">提交给 AI 顾问</button>
+            <p id="form-msg" class="form-msg"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-row">
+        <span>© 2026 智链AI</span>
+        <a href="mailto:hello@zhilianai.com">hello@zhilianai.com</a>
+      </div>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

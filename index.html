@@ -4,31 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NexaArtistry AI | 企业官网</title>
-    <meta name="description" content="面向企业的官网、AI顾问与CRM后台一体化解决方案" />
-    <meta name="robots" content="index,follow" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="NexaArtistry AI | 企业官网" />
-    <meta property="og:description" content="把品牌官网、AI 顾问和客户运营整合为一套可扩展的 SaaS 体验。" />
-    <meta property="og:locale" content="zh_CN" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content="#07111f" />
+    <meta
+      name="description"
+      content="面向企业的官网、AI顾问与CRM后台一体化解决方案"
+    />
     <link rel="stylesheet" href="/styles.css" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "NexaArtistry AI",
-        "url": "https://nexaartistry.ai",
-        "email": "hello@nexaartistry.ai",
-        "description": "企业官网、AI顾问与CRM后台一体化解决方案提供方"
-      }
-    </script>
   </head>
   <body>
-    <a class="skip-link" href="#main-content">跳到主要内容</a>
-
     <header class="hero">
-      <nav class="nav container" aria-label="主导航">
+      <nav class="nav container">
         <a class="brand" href="/">NexaArtistry AI</a>
         <div class="nav-links">
           <a href="/about.html">关于我们</a>
@@ -40,8 +24,8 @@
           <a href="/crm.html">CRM后台</a>
         </div>
         <div class="nav-actions">
-          <button class="btn btn-secondary auth-trigger" data-mode="login" aria-haspopup="dialog">登录</button>
-          <button class="btn btn-primary auth-trigger" data-mode="register" aria-haspopup="dialog">注册</button>
+          <button class="btn btn-secondary auth-trigger" data-mode="login">登录</button>
+          <button class="btn btn-primary auth-trigger" data-mode="register">注册</button>
         </div>
       </nav>
 
@@ -71,7 +55,7 @@
       </div>
     </header>
 
-    <main id="main-content">
+    <main>
       <section id="solutions" class="section container">
         <div class="section-heading">
           <p class="eyebrow">解决方案</p>
@@ -174,7 +158,7 @@
     </footer>
 
     <div class="modal-backdrop" id="authModal" hidden>
-      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <div class="modal-card">
         <div class="modal-head">
           <h3 id="authTitle">登录</h3>
           <button class="modal-close" id="closeAuth" type="button" aria-label="关闭">×</button>
@@ -186,11 +170,11 @@
         <form class="auth-form" id="authForm">
           <label>
             邮箱
-            <input type="email" name="email" placeholder="name@company.com" autocomplete="email" required />
+            <input type="email" name="email" placeholder="name@company.com" required />
           </label>
           <label>
             密码
-            <input type="password" name="password" placeholder="请输入密码" autocomplete="current-password" required />
+            <input type="password" name="password" placeholder="请输入密码" required />
           </label>
           <button class="btn btn-primary" type="submit">确认</button>
         </form>
@@ -198,6 +182,6 @@
       </div>
     </div>
 
-    <script src="/script.js" defer></script>
+    <script src="/script.js"></script>
   </body>
 </html>

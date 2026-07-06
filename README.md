@@ -18,3 +18,7 @@ npx serve .
 1. 将仓库推送到 GitHub
 2. 在 Vercel 中导入该仓库
 3. 选择默认配置即可完成部署
+
+## GitHub Pages
+
+已配置 GitHub Actions 自动部署，推送到 `main` 会触发一次 Pages 发布。

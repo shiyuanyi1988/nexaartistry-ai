@@ -1,4 +1,8 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "."
+  "version": 2,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "public": true,
+  "env": {},
+  "regions": ["all"]
 }

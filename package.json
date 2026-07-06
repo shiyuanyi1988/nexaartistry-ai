@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "npx serve .",
-    "build": "echo 'Static site - no build needed'"
+    "start": "npx serve ."
   },
   "dependencies": {
     "serve": "^14.0.0"

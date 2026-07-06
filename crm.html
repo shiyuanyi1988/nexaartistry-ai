@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CRM后台 · NexaArtistry AI</title>
+    <meta name="description" content="NexaArtistry AI CRM后台：客户线索、工单、报价与跟进流程统一管理。" />
+    <meta name="robots" content="noindex,nofollow" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+
     <div class="admin-shell">
       <aside class="sidebar">
         <div class="sidebar-brand">
@@ -17,7 +21,7 @@
           </div>
         </div>
 
-        <nav class="sidebar-nav">
+        <nav class="sidebar-nav" aria-label="后台模块导航">
           <a class="active" href="#">概览</a>
           <a href="#">客户详情</a>
           <a href="#">工单</a>
@@ -26,11 +30,11 @@
         </nav>
 
         <div class="sidebar-footer">
-          <button class="btn btn-secondary auth-trigger" data-mode="login" type="button">登录 / 注册</button>
+          <button class="btn btn-secondary auth-trigger" data-mode="login" type="button" aria-haspopup="dialog">登录 / 注册</button>
         </div>
       </aside>
 
-      <div class="admin-main">
+      <main id="main-content" class="admin-main">
         <header class="dashboard-topbar">
           <div>
             <p class="eyebrow">CRM 后台</p>
@@ -38,7 +42,7 @@
           </div>
           <div class="topbar-actions">
             <a class="btn btn-secondary" href="/">返回官网</a>
-            <button class="btn btn-primary auth-trigger" data-mode="register" type="button">创建账号</button>
+            <button class="btn btn-primary auth-trigger" data-mode="register" type="button" aria-haspopup="dialog">创建账号</button>
           </div>
         </header>
 
@@ -109,12 +113,13 @@
             <span class="tag">实时更新</span>
           </div>
           <table>
+            <caption class="sr-only">近期客户列表</caption>
             <thead>
               <tr>
-                <th>客户</th>
-                <th>联系信息</th>
-                <th>状态</th>
-                <th>备注</th>
+                <th scope="col">客户</th>
+                <th scope="col">联系信息</th>
+                <th scope="col">状态</th>
+                <th scope="col">备注</th>
               </tr>
             </thead>
             <tbody>
@@ -139,11 +144,11 @@
             </tbody>
           </table>
         </section>
-      </div>
+      </main>
     </div>
 
     <div class="modal-backdrop" id="authModal" hidden>
-      <div class="modal-card">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="authTitle">
         <div class="modal-head">
           <h3 id="authTitle">登录</h3>
           <button class="modal-close" id="closeAuth" type="button" aria-label="关闭">×</button>
@@ -155,11 +160,11 @@
         <form class="auth-form" id="authForm">
           <label>
             邮箱
-            <input type="email" name="email" placeholder="name@company.com" required />
+            <input type="email" name="email" placeholder="name@company.com" autocomplete="email" required />
           </label>
           <label>
             密码
-            <input type="password" name="password" placeholder="请输入密码" required />
+            <input type="password" name="password" placeholder="请输入密码" autocomplete="current-password" required />
           </label>
           <button class="btn btn-primary" type="submit">确认</button>
         </form>
@@ -167,6 +172,6 @@
       </div>
     </div>
 
-    <script src="/script.js"></script>
+    <script src="/script.js" defer></script>
   </body>
 </html>

@@ -2,6 +2,12 @@ const chatForm = document.getElementById('chat-form');
 const chatBody = document.getElementById('chat-body');
 const chatInput = document.getElementById('chat-input');
 
+if (chatBody) {
+  chatBody.setAttribute('role', 'log');
+  chatBody.setAttribute('aria-live', 'polite');
+  chatBody.setAttribute('aria-relevant', 'additions');
+}
+
 function appendMessage(text, role) {
   if (!chatBody) return;
   const bubble = document.createElement('div');
@@ -57,8 +63,9 @@ function setAuthMode(mode) {
 }
 
 function openAuth(mode) {
+  if (!authModal) return;
   setAuthMode(mode);
-  if (authModal) authModal.hidden = false;
+  authModal.hidden = false;
   if (authMessage) authMessage.textContent = '';
 }
 
@@ -85,7 +92,7 @@ authTabs.forEach((button) => {
 authForm?.addEventListener('submit', (event) => {
   event.preventDefault();
   const formData = new FormData(authForm);
-  const email = formData.get('email');
+  const email = (formData.get('email') || '').toString();
   if (authMessage) {
     authMessage.textContent = activeMode === 'register'
       ? `已为 ${email} 创建账号，欢迎进入 NexaArtistry AI。`
